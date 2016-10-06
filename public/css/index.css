@@ -1,0 +1,113 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(font-awesome/css/font-awesome.min.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  background: #EFEFEF; }
+
+.content-wrapper {
+  margin: 0 auto;
+  width: 960px;
+  text-align: center; }
+  @media only screen and (max-width: 768px) {
+    .content-wrapper {
+      width: 768px; } }
+
+#home {
+  font-family: Arial, 'Helvetica', sans-serif; }
+  #home .logo {
+    margin: 50px 0 60px -60px; }
+    #home .logo .logo-image {
+      display: block;
+      margin: 0 auto; }
+    #home .logo .logo-tag {
+      color: #75BD5C;
+      font-size: 3.6em;
+      position: relative;
+      font-weight: bold;
+      left: 78px; }
+    #home .logo .logo-tag-sub {
+      font-style: italic;
+      font-size: 0.4em;
+      color: black;
+      left: -12px;
+      position: relative; }
+  #home .button {
+    width: 180px;
+    height: 150px;
+    font-size: 1.5em;
+    background: white;
+    margin: 0 20px 20px;
+    border: 0;
+    font-weight: bold;
+    border-radius: 5px; }
+    @media only screen and (max-width: 768px) {
+      #home .button {
+        margin: 0 25px 50px;
+        width: 260px;
+        height: 200px; } }
+  #home .fa {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #75BD5C; }
+  #home .shakes {
+    font-weight: bold;
+    margin-bottom: 60px; }
+    #home .shakes .shakes-date {
+      font-size: 1.3em;
+      text-transform: uppercase;
+      color: #75BD5C; }
+    #home .shakes .shakes-served {
+      font-size: 2em;
+      text-transform: uppercase;
+      margin: 15px auto 5px; }
+    #home .shakes .shakes-counter {
+      font-size: 3em;
+      font-style: italic;
+      letter-spacing: 2px; }
+
+/*# sourceMappingURL=index.css.map */
