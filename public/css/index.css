@@ -66,9 +66,11 @@ html {
   font-style: italic;
   color: black; }
 
+button:hover {
+  cursor: pointer; }
+
 /*********** HOME PAGE ************/
 #home {
-  display: none;
   text-align: center; }
   #home .logo-wrapper {
     margin: 50px 0 60px -60px; }
@@ -87,7 +89,7 @@ html {
       color: black;
       left: -12px;
       position: relative; }
-  #home .button {
+  #home .nav {
     width: 180px;
     height: 150px;
     font-size: 1.5em;
@@ -96,11 +98,6 @@ html {
     border: 0;
     font-weight: bold;
     border-radius: 4px; }
-    @media only screen and (max-width: 768px) {
-      #home .button {
-        margin: 0 25px 50px;
-        width: 260px;
-        height: 200px; } }
   #home .fa {
     font-size: 2em;
     margin-bottom: 15px;
@@ -122,117 +119,194 @@ html {
       letter-spacing: 2px; }
 
 /*********** END HOME PAGE ************/
-/********** SHAKE ORDER PAGE **********/
-@media only screen and (max-width: 768px) {
-  #orders .content-wrapper {
-    width: 740px; } }
-#orders .logo-wrapper {
-  margin: 25px 0 20px 0;
-  position: relative; }
-  @media only screen and (max-width: 768px) {
-    #orders .logo-wrapper {
-      margin: 40px 0; } }
-  #orders .logo-wrapper .logo-image {
-    display: block;
-    width: 175px; }
-  #orders .logo-wrapper .logo-tag {
-    font-size: 1.25em;
-    position: relative;
-    left: 30px; }
-  #orders .logo-wrapper .logo-tag-sub {
-    font-size: 0.4em;
-    left: -4px;
-    position: relative; }
-#orders .order {
-  width: 48.5%;
-  border-radius: 4px;
-  background-color: white;
-  box-sizing: border-box;
-  padding: 20px;
-  position: relative; }
-  @media only screen and (max-width: 768px) {
-    #orders .order {
-      padding: 15px; } }
-  #orders .order.first-order {
-    float: left;
-    margin: 0 15px 20px 0; }
-  #orders .order.second-order {
-    float: right; }
-  #orders .order .done {
-    position: absolute;
-    right: 20px;
-    top: 17px; }
-    #orders .order .done .fa-check {
-      font-size: 2em; }
-  #orders .order .cancel {
-    clear: both;
-    background: #BC0505;
-    border: 0;
-    border-radius: 4px;
-    text-align: center;
-    padding: 20px;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    display: block;
-    margin: 40px auto 10px; }
-  #orders .order .order-instructions-box {
-    min-height: 15px; }
-#orders .orders-button-wrapper {
-  position: absolute;
-  right: 0;
-  top: 0; }
-#orders .break-button, #orders .inventory-button {
+#orders .nav.break, #orders .nav.inventory, #orders .nav.home, #inventory .nav.break, #inventory .nav.inventory, #inventory .nav.home, #break .nav.break, #break .nav.inventory, #break .nav.home {
   background: #febf16;
   border: 0;
   border-radius: 4px;
   text-align: center;
-  padding: 15px;
-  width: 150px;
+  padding: 16px;
+  width: 100px;
   color: white;
   font-size: 20px;
   font-weight: 600;
-  margin-left: 15px; }
-#orders .order-queue {
-  clear: both;
-  padding-top: 20px;
-  border-top: 2px solid black; }
-  #orders .order-queue .order {
-    width: 18.4%;
-    height: 130px;
-    float: left;
-    margin-right: 19px; }
-    #orders .order-queue .order:last-of-type {
-      margin-right: 0; }
-    @media only screen and (max-width: 768px) {
-      #orders .order-queue .order {
-        width: 17.8%; } }
-  #orders .order-queue .order-name {
-    font-size: 1em; }
-  #orders .order-queue .flavor {
-    font-size: 0.8em;
-    margin-bottom: 0; }
-  #orders .order-queue .done, #orders .order-queue .subhead, #orders .order-queue .order-instructions-box, #orders .order-queue .cancel, #orders .order-queue .base, #orders .order-queue .add-ons, #orders .order-queue .boosts {
-    display: none; }
-#orders .subhead {
-  font-size: 1.3em;
-  margin: 20px auto;
-  font-weight: bold;
-  text-decoration: underline; }
-#orders .order-title {
-  font-size: 1.2em;
-  margin: 15px auto;
-  font-weight: bold;
-  line-height: 1.5; }
+  margin-left: 15px;
+  font-size: 1em; }
+@media only screen and (max-width: 768px) {
+  #orders .content-wrapper, #inventory .content-wrapper, #break .content-wrapper {
+    width: 740px; } }
+#orders .logo-wrapper, #inventory .logo-wrapper, #break .logo-wrapper {
+  margin: 25px 0 20px 0;
+  position: relative; }
   @media only screen and (max-width: 768px) {
-    #orders .order-title {
-      font-size: 1em; } }
-#orders .order-name {
-  font-size: 1.7em;
-  font-weight: bold;
-  color: #6cc24a; }
-#orders .order-selection {
-  font-weight: normal; }
+    #orders .logo-wrapper, #inventory .logo-wrapper, #break .logo-wrapper {
+      margin: 40px 0; } }
+  #orders .logo-wrapper .logo-image, #inventory .logo-wrapper .logo-image, #break .logo-wrapper .logo-image {
+    display: block;
+    width: 175px; }
+  #orders .logo-wrapper .logo-tag, #inventory .logo-wrapper .logo-tag, #break .logo-wrapper .logo-tag {
+    font-size: 1.25em;
+    position: relative;
+    left: 30px; }
+  #orders .logo-wrapper .logo-tag-sub, #inventory .logo-wrapper .logo-tag-sub, #break .logo-wrapper .logo-tag-sub {
+    font-size: 0.4em;
+    left: -4px;
+    position: relative; }
+#orders .orders-button-wrapper, #inventory .orders-button-wrapper, #break .orders-button-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+/********** SHAKE ORDER PAGE **********/
+#orders {
+  display: none;
+  /* The Modal (background) */
+  /* Modal Content */
+  /* The Close Button */ }
+  #orders .order {
+    width: 48.5%;
+    border-radius: 4px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative; }
+    @media only screen and (max-width: 768px) {
+      #orders .order {
+        padding: 15px; } }
+    #orders .order.first-order {
+      float: left;
+      margin: 0 15px 20px 0; }
+    #orders .order.second-order {
+      float: right; }
+    #orders .order .done {
+      position: absolute;
+      right: 20px;
+      top: 17px; }
+      #orders .order .done .fa-check {
+        font-size: 2em; }
+    #orders .order .cancel {
+      clear: both;
+      background: #BC0505;
+      border: 0;
+      border-radius: 4px;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      display: block;
+      margin: 40px auto 10px; }
+    #orders .order .order-instructions-box {
+      min-height: 15px; }
+  #orders .order-queue {
+    clear: both;
+    padding-top: 20px;
+    border-top: 2px solid black; }
+    #orders .order-queue .order {
+      width: 18.4%;
+      height: 130px;
+      float: left;
+      margin-right: 19px; }
+      #orders .order-queue .order:last-of-type {
+        margin-right: 0; }
+      @media only screen and (max-width: 768px) {
+        #orders .order-queue .order {
+          width: 17.8%; } }
+    #orders .order-queue .order-name {
+      font-size: 1em; }
+    #orders .order-queue .flavor {
+      font-size: 0.8em;
+      margin-bottom: 0; }
+    #orders .order-queue .done, #orders .order-queue .subhead, #orders .order-queue .order-instructions-box, #orders .order-queue .cancel, #orders .order-queue .base, #orders .order-queue .add-ons, #orders .order-queue .boosts {
+      display: none; }
+  #orders .subhead {
+    font-size: 1.3em;
+    margin: 20px auto;
+    font-weight: bold;
+    text-decoration: underline; }
+  #orders .order-title {
+    font-size: 1.2em;
+    margin: 15px auto;
+    font-weight: bold;
+    line-height: 1.5; }
+    @media only screen and (max-width: 768px) {
+      #orders .order-title {
+        font-size: 1em; } }
+  #orders .order-name {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #6cc24a; }
+  #orders .order-selection {
+    font-weight: normal; }
+  #orders .modal {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 5%;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */ }
+  #orders .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  #orders .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold; }
+  #orders .close:hover,
+  #orders .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
+  #orders .modal-header {
+    padding: 2px 16px;
+    color: white; }
+  #orders .modal-body {
+    padding: 5px 22px 16px 16px; }
+    #orders .modal-body p {
+      color: #6cc24a;
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 10px; }
+    #orders .modal-body textarea {
+      width: 98%;
+      font-size: 0.85em;
+      height: 200px;
+      border: 1px solid gray;
+      font-family: Arial, 'Helvetica', Sans-serif;
+      padding: 5px; }
+    #orders .modal-body .notify-user {
+      background: #6cc24a;
+      border: 0;
+      border-radius: 4px;
+      text-align: center;
+      padding: 16px;
+      width: 100%;
+      color: white;
+      font-weight: 600;
+      font-size: 1em;
+      margin-top: 10px; }
+  #orders .modal-footer {
+    padding: 2px 16px;
+    color: white; }
 
 #break {
   display: none; }

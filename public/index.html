@@ -9,7 +9,7 @@
 </head>
 <body>
 	<nav></nav>
-	<div id="home">
+	<div id="home" class="section-wrapper">
 		<div class="content-wrapper">
 			<div class="logo-wrapper">
 				<img class="logo-image" src="images/shakeology-logo.png" alt="Shakeology Logo">
@@ -21,32 +21,54 @@
 				<p class="shakes-counter">200</p>
 			</div>
 			<div class="button-wrapper">
-				<button class="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><br>Take Orders</button>
-				<button class="button"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><br>Check-In</button>
-				<button class="button"><i class="fa fa-coffee" aria-hidden="true"></i><br>Set Break</button>
-				<button class="button"><i class="fa fa-archive" aria-hidden="true"></i><br>Inventory</button>
+				<button class="nav orders"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><br>Take Orders</button>
+				<button class="nav break"><i class="fa fa-coffee" aria-hidden="true"></i><br>Set Break</button>
+				<button class="nav inventory"><i class="fa fa-archive" aria-hidden="true"></i><br>Inventory</button>
 			</div>
 		</div>
 	</div>
-	<div id="orders">
+	<div id="orders" class="section-wrapper">
 		<div class="content-wrapper">
 			<div class="logo-wrapper">
 				<img class="logo-image" src="images/shakeology-logo.png" alt="Shakeology Logo">
 				<span class="logo-tag">On Demand <span class="logo-tag-sub">Shakeista Portal</span></span>
 				<div class="orders-button-wrapper">
-					<button class="break-button">Break</button>
-					<button class="inventory-button">Inventory</button>
+					<button class="nav home">Home</button>
+					<button class="nav break">Break</button>
+					<button class="nav inventory">Inventory</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="break">
+	<div id="break" class="section-wrapper">
+		<div class="content-wrapper">
+			<div class="logo-wrapper">
+				<img class="logo-image" src="images/shakeology-logo.png" alt="Shakeology Logo">
+				<span class="logo-tag">On Demand <span class="logo-tag-sub">Shakeista Portal</span></span>
+				<div class="orders-button-wrapper">
+					<button class="nav home">Home</button>
+					<button class="nav break">Break</button>
+					<button class="nav inventory">Inventory</button>
+				</div>
+			</div>
+		</div>
 		<label class="switch">
 		  <input id="break-switch" type="checkbox">
 		  <div class="slider round"></div>
 		</label>
 	</div>
-	<div id="inventory">
+	<div id="inventory" class="section-wrapper">
+		<div class="content-wrapper">
+			<div class="logo-wrapper">
+				<img class="logo-image" src="images/shakeology-logo.png" alt="Shakeology Logo">
+				<span class="logo-tag">On Demand <span class="logo-tag-sub">Shakeista Portal</span></span>
+				<div class="orders-button-wrapper">
+					<button class="nav home">Home</button>
+					<button class="nav break">Break</button>
+					<button class="nav inventory">Inventory</button>
+				</div>
+			</div>
+		</div>
 		<div class="customization-container"></div>
 		<input type="submit" id="submitMissing" value="Update Missing Ingredients"/>
 	</div>

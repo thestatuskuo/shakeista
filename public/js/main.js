@@ -4,7 +4,7 @@ $( document ).ready(function() {
     orders.then(function(data) {
 		$.each(data, function(i, item) {
 			$( "#orders .logo-wrapper" ).after( 
-				'<div class="order"><span class="done"><i class="fa fa-check" aria-hidden="true"></i></span><p class="order-name">Sharie</p><p class="subhead">Order</p><div class="order-wrapper"><p class="order-title flavor">Flavor: <span class="order-selection">'+data[i]['Flavors[]']+'</span></p><p class="order-title base">Base: <span class="order-selection base">'+data[i]['Base[]']+'</span></p><p class="order-title add-ons">Add-Ons: <span class="order-selection">'+data[i]['Add-Ins[]']+'</span></p><p class="order-title boosts">Boosts: <span class="order-selection">'+data[i]['Boosts[]']+'</span></p></div><p class="subhead">Special Instructions</p><p class="order-instructions-box">'+data[i]['note']+'</p><button class="cancel">CANCEL ORDER</button></div>'
+				'<div class="order"><span class="done"><i class="fa fa-check" aria-hidden="true"></i></span><p class="order-name">Sharie</p><p class="subhead">Order</p><div class="order-wrapper"><p class="order-title flavor">Flavor: <span class="order-selection">'+data[i]['Flavors[]']+'</span></p><p class="order-title base">Base: <span class="order-selection base">'+data[i]['Base[]']+'</span></p><p class="order-title add-ons">Add-Ons: <span class="order-selection">'+data[i]['Add-Ins[]']+'</span></p><p class="order-title boosts">Boosts: <span class="order-selection">'+data[i]['Boosts[]']+'</span></p></div><p class="subhead">Special Instructions</p><p class="order-instructions-box">'+data[i]['note']+'</p><button class="cancel">CANCEL ORDER</button><div id="cancel-modal" class="modal"><div class="modal-content"><div class="modal-header"><span class="close">×</span></div><div class="modal-body"><p>Sharie</p><textarea>Why your order cant be placed</textarea><button class="notify-user">Notify User</button></div></div></div></div>'
 			);
 		});
 		$("#orders .order").first().addClass('first-order');
@@ -14,6 +14,21 @@ $( document ).ready(function() {
 			return $(this).text().replace(",", ", "); 
 		});
 
+		$(".cancel").click(function(){
+			$(this).next('#cancel-modal').show();
+			$('#cancel-modal .close').click(function(){
+				$(this).parents('#cancel-modal').hide();
+			});
+		});
+    });
+
+    $('#home .nav, #orders .nav, #break .nav, #inventory .nav').click(function(){
+		var buttonClass = $(this).attr('class').split(' ')[1];
+    	console.log(buttonClass);
+    	$.each($('.section-wrapper'), function(){
+    		$(this).hide();
+    	});
+    	$('#' + buttonClass + '').show();
     });
 
 	$("#submitMissing").click(function() {
