@@ -95,7 +95,7 @@ html {
     margin: 0 20px 20px;
     border: 0;
     font-weight: bold;
-    border-radius: 5px; }
+    border-radius: 4px; }
     @media only screen and (max-width: 768px) {
       #home .button {
         margin: 0 25px 50px;
@@ -140,25 +140,63 @@ html {
     left: -4px;
     position: relative; }
 #orders .order {
-  width: 45%;
-  border-radius: 5px;
+  width: 48%;
+  border-radius: 4px;
   background-color: white;
   box-sizing: border-box;
-  padding: 20px; }
-  #orders .order.first-order, #orders .order.second-order {
-    background-color: black; }
+  padding: 20px;
+  position: relative; }
+  #orders .order.first-order {
+    float: left;
+    margin: 0 15px 20px 0; }
+  #orders .order.second-order {
+    float: right; }
+  #orders .order .done {
+    position: absolute;
+    right: 20px;
+    top: 17px; }
+    #orders .order .done .fa-check {
+      font-size: 2em; }
+  #orders .order .cancel {
+    clear: both;
+    background: #BC0505;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin: 40px auto 10px; }
+  #orders .order .order-instructions-box {
+    min-height: 15px; }
+#orders .order-queue {
+  clear: both;
+  padding-top: 20px;
+  border-top: 2px solid black; }
+  #orders .order-queue .order {
+    width: 18.4%;
+    height: 170px;
+    float: left;
+    margin-right: 19px; }
+    #orders .order-queue .order:last-of-type {
+      margin-right: 0; }
 #orders .subhead {
-  font-size: 1.5em;
-  margin: 20px auto;
-  font-weight: bold; }
-#orders .order-title {
   font-size: 1.3em;
+  margin: 20px auto;
+  font-weight: bold;
+  text-decoration: underline; }
+#orders .order-title {
+  font-size: 1.2em;
   margin: 15px auto;
   font-weight: bold; }
 #orders .order-name {
   font-size: 1.7em;
   font-weight: bold;
   color: #75BD5C; }
+#orders .order-selection {
+  font-weight: normal; }
 
 .switch {
   position: relative;

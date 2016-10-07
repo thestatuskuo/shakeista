@@ -72,7 +72,7 @@ html{
     margin: 0 20px 20px;
     border: 0;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 4px;
 
     @media only screen and (max-width: 768px){
       margin: 0 25px 50px;
@@ -142,24 +142,70 @@ html{
   }
 
   .order{
-    width: 45%;
-    border-radius: 5px;
+    width: 48%;
+    border-radius: 4px;
     background-color: white;
     box-sizing: border-box;
     padding: 20px;
-    &.first-order, &.second-order{
-      background-color: black;
+    position: relative;
+    &.first-order{
+      float: left;
+      margin: 0 15px 20px 0;
+    }
+    &.second-order{
+      float: right;
+    }
+    .done{
+      position: absolute;
+      right: 20px;
+      top: 17px;
+      .fa-check{
+        font-size: 2em;
+      }
+    }
+    .cancel{
+      clear: both;
+      background: #BC0505;
+      border: 0;
+      border-radius: 4px;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      display: block;
+      margin: 40px auto 10px;
+    }
+    .order-instructions-box{
+      min-height: 15px;
+    }
+  }
+
+  .order-queue{
+    clear: both;
+    padding-top: 20px;
+    border-top: 2px solid black;
+
+    .order{
+      width: 18.4%;
+      height: 170px;
+      float: left;
+      margin-right: 19px;
+      &:last-of-type{
+        margin-right: 0;
+      }
     }
   }
 
   .subhead{
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 20px auto;
     font-weight: bold;
+    text-decoration: underline;
   }
 
   .order-title{
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 15px auto;
     font-weight: bold;
   }
@@ -168,6 +214,10 @@ html{
     font-size: 1.7em;
     font-weight: bold;
     color: $green;
+  }
+
+  .order-selection{
+    font-weight: normal;
   }
 }
 
