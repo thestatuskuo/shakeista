@@ -139,5 +139,23 @@ html {
     font-size: 0.4em;
     left: -4px;
     position: relative; }
+#orders .first-order, #orders .second-order {
+  width: 45%;
+  border-radius: 5px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 20px; }
+#orders .subhead {
+  font-size: 1.5em;
+  margin: 20px auto;
+  font-weight: bold; }
+#orders .order-title {
+  font-size: 1.3em;
+  margin: 15px auto;
+  font-weight: bold; }
+#orders .order-name {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #75BD5C; }
 
 /*# sourceMappingURL=index.css.map */
