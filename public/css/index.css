@@ -139,12 +139,14 @@ html {
     font-size: 0.4em;
     left: -4px;
     position: relative; }
-#orders .first-order, #orders .second-order {
+#orders .order {
   width: 45%;
   border-radius: 5px;
   background-color: white;
   box-sizing: border-box;
   padding: 20px; }
+  #orders .order.first-order, #orders .order.second-order {
+    background-color: black; }
 #orders .subhead {
   font-size: 1.5em;
   margin: 20px auto;

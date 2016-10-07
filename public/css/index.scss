@@ -141,12 +141,15 @@ html{
     }
   }
 
-  .first-order, .second-order{
+  .order{
     width: 45%;
     border-radius: 5px;
     background-color: white;
     box-sizing: border-box;
     padding: 20px;
+    &.first-order, &.second-order{
+      background-color: black;
+    }
   }
 
   .subhead{

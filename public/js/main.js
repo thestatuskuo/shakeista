@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+<<<<<<< Updated upstream
 	buildInventoryList();
 	// Ignition.getOrders().then(function(data) {
 	// 	console.log(data);
@@ -57,3 +58,16 @@ function getMissingIngredients() {
 	}
 	return list;
 }
+=======
+    var orders = Ignition.getOrders();
+    orders.then(function(data) {
+		$.each(data, function(i, item) {
+			$( "#orders .logo-wrapper" ).after( 
+				'<div class="order"><p class="order-name">Sharie</p><p class="subhead">Order</p><div class="order-wrapper"><p class="order-title">Flavor: <span class="order-flavor">'+data[i]['Flavors[]']+'</span></p><p class="order-title">Base: <span class="order-base">'+data[i]['Base[]']+'</span></p><p class="order-title">Add-Ons: <span class="order-add-ons">'+data[i]['Add-Ins[]']+'</span></p><p class="order-title">Boosts: <span class="order-boosts">'+data[i]['Boosts[]']+'</span></p></div><p class="subhead">Special Instructions</p><textarea class="order-instructions-box">'+data[i]['note']+'</textarea></div>'
+			);
+		});
+		$("#orders .order").first().addClass('first-order');
+		$("#orders .first-order").next('#orders .order').addClass('second-order');
+    });
+});
+>>>>>>> Stashed changes
