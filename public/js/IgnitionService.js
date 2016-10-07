@@ -33,19 +33,26 @@ var Ignition = (function() {
 	};
 
 	var ignitionBaseUrl = "https://ignition-hackday.herokuapp.com";
-	var orderUrl = ignitionBaseUrl + "/orders/";
+	var orderUrl = ignitionBaseUrl + "/orders";
 	var ingredientsUrl = ignitionBaseUrl + "/ingredients";
 	var onBreakUrl = ignitionBaseUrl + "/break";
 
-	function closeOrder(orderId) {
-		$.ajax({
-		    url: orderUrl + orderId,
-			type: 'PUT',
-			data: {
-				"status": "closed"
-			},
+	function cancelOrder(orderId, note) {
+		return $.post({
+		    url: orderUrl + "/cancel/" + orderId,
+		    data : { note: note},
 			success: function(res) {
-				console.log(res);
+				return res;
+			}
+		});
+	}
+
+	function closeOrder(orderId) {
+		return $.post({
+		    url: orderUrl + "/close/" + orderId,
+		    data : {},
+			success: function(res) {
+				return res;
 			}
 		});
 	}
@@ -148,6 +155,7 @@ var Ignition = (function() {
 	}
 
 	return {
+		cancelOrder: cancelOrder,
 		closeOrder: closeOrder,
 		generateRandomIngredientList: generateRandomIngredientList,
 		generateRandomOrder: generateRandomOrder,
