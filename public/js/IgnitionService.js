@@ -108,7 +108,10 @@ var Ignition = (function() {
 			url: ingredientsUrl,
 			data : ingredientList,
 			success: function(res) {
-				return res;
+				return true;
+			},
+			error: function(res) {
+				return false;
 			}
 		});
 	}
