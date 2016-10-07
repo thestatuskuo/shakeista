@@ -60,7 +60,7 @@ html {
 .logo-wrapper .logo-image {
   display: block; }
 .logo-wrapper .logo-tag {
-  color: #75BD5C;
+  color: #6cc24a;
   font-weight: bold; }
 .logo-wrapper .logo-tag-sub {
   font-style: italic;
@@ -76,7 +76,7 @@ html {
       display: block;
       margin: 0 auto; }
     #home .logo-wrapper .logo-tag {
-      color: #75BD5C;
+      color: #6cc24a;
       font-size: 3.6em;
       position: relative;
       font-weight: bold;
@@ -104,14 +104,14 @@ html {
   #home .fa {
     font-size: 2em;
     margin-bottom: 15px;
-    color: #75BD5C; }
+    color: #6cc24a; }
   #home .shakes-wrapper {
     font-weight: bold;
     margin-bottom: 60px; }
     #home .shakes-wrapper .shakes-date {
       font-size: 1.3em;
       text-transform: uppercase;
-      color: #75BD5C; }
+      color: #6cc24a; }
     #home .shakes-wrapper .shakes-served {
       font-size: 2em;
       text-transform: uppercase;
@@ -124,7 +124,8 @@ html {
 /*********** END HOME PAGE ************/
 /********** SHAKE ORDER PAGE **********/
 #orders .logo-wrapper {
-  margin: 50px 0 60px 0; }
+  margin: 32px 0 30px 0;
+  position: relative; }
   #orders .logo-wrapper .logo-image {
     display: block;
     width: 175px; }
@@ -171,17 +172,34 @@ html {
     margin: 40px auto 10px; }
   #orders .order .order-instructions-box {
     min-height: 15px; }
+#orders .orders-button-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0; }
+#orders .break-button, #orders .inventory-button {
+  background: #febf16;
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+  padding: 15px;
+  width: 150px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 15px; }
 #orders .order-queue {
   clear: both;
   padding-top: 20px;
   border-top: 2px solid black; }
   #orders .order-queue .order {
     width: 18.4%;
-    height: 170px;
+    height: 130px;
     float: left;
     margin-right: 19px; }
     #orders .order-queue .order:last-of-type {
       margin-right: 0; }
+  #orders .order-queue .order-name {
+    font-size: 1.3em; }
   #orders .order-queue .flavor {
     font-size: 1em; }
   #orders .order-queue .done, #orders .order-queue .subhead, #orders .order-queue .order-instructions-box, #orders .order-queue .cancel, #orders .order-queue .base, #orders .order-queue .add-ons, #orders .order-queue .boosts {
@@ -198,9 +216,15 @@ html {
 #orders .order-name {
   font-size: 1.7em;
   font-weight: bold;
-  color: #75BD5C; }
+  color: #6cc24a; }
 #orders .order-selection {
   font-weight: normal; }
+
+#break {
+  display: none; }
+
+#inventory {
+  display: none; }
 
 .switch {
   position: relative;

@@ -2,6 +2,14 @@
 @import 'font-awesome/css/font-awesome.min.css';
 $green: #75BD5C;
 $lightgray: #EFEFEF;
+$lightgrey: #c1c1c1;
+$green: #6cc24a;
+$darkgrey: #7e847d;
+$white: #ffffff;
+$black: #000000;
+$gold: #febf16;
+$darkgreen: #1d7102;
+$red: #BC0505;
 
 html{
   background: $lightgray;
@@ -119,7 +127,8 @@ html{
   // display: none;
 
   .logo-wrapper{
-    margin: 50px 0 60px 0;
+    margin: 32px 0 30px 0;
+    position: relative;
 
     .logo-image{
       display: block;
@@ -167,7 +176,7 @@ html{
     }
     .cancel{
       clear: both;
-      background: #BC0505;
+      background: $red;
       border: 0;
       border-radius: 4px;
       text-align: center;
@@ -183,6 +192,26 @@ html{
     }
   }
 
+  .orders-button-wrapper{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .break-button, .inventory-button{
+      background: $gold;
+      border: 0;
+      border-radius: 4px;
+      text-align: center;
+      padding: 15px;
+      width: 150px;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      margin-left: 15px;
+
+  }
+
   .order-queue{
     clear: both;
     padding-top: 20px;
@@ -190,12 +219,16 @@ html{
 
     .order{
       width: 18.4%;
-      height: 170px;
+      height: 130px;
       float: left;
       margin-right: 19px;
       &:last-of-type{
         margin-right: 0;
       }
+    }
+
+    .order-name{
+      font-size: 1.3em;
     }
 
     .flavor{
@@ -229,6 +262,14 @@ html{
   .order-selection{
     font-weight: normal;
   }
+}
+
+#break{
+  display: none;
+}
+
+#inventory{
+  display: none;
 }
 
 //SLIDER
