@@ -89,6 +89,8 @@ button:hover {
       color: black;
       left: -12px;
       position: relative; }
+  #home:not(.open) .nav {
+    pointer-events: none; }
   #home .nav {
     width: 180px;
     height: 150px;

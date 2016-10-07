@@ -26,9 +26,19 @@ $( document ).ready(function() {
 		});
 	});
 
+	function openClosed(){
+		if ($(".switch .closed").hasClass('open')){
+			$('#home').addClass('open');
+		}
+		else{
+			$('#home').removeClass('open');
+		}
+	};
+
 	$("#break-switch").change(function() {
 		var onBreak = $("#break-switch").is(':checked');
 		$(".switch .closed").toggleClass('open');
+		openClosed();
 		Ignition.postOnBreakFlag(onBreak).then(function(data) {
 			if (data) {
 			} else {
@@ -59,10 +69,6 @@ $( document ).ready(function() {
 			buildOrders();
 		});
 	});
-
-	if ($(".switch .closed").hasClass('open')){
-		console.log('hello');
-	};
 });
 
 function buildOrders() {
