@@ -32,8 +32,10 @@ var Ignition = (function() {
 		]
 	};
 
-	var orderUrl = "https://ignition-hackday.herokuapp.com/orders/";
-	var ingredientsUrl = "https://ignition-hackday.herokuapp.com/ingredients";
+	var ignitionBaseUrl = "https://ignition-hackday.herokuapp.com";
+	var orderUrl = ignitionBaseUrl + "/orders/";
+	var ingredientsUrl = ignitionBaseUrl + "/ingredients";
+	var onBreakUrl = ignitionBaseUrl + "/break";
 
 	function closeOrder(orderId) {
 		$.ajax({
@@ -121,16 +123,42 @@ var Ignition = (function() {
 		postMissingIngredients(list);
 	}
 
+	function getOnBreakFlag() {
+		return $.get({
+			url: onBreakUrl,
+			success: function(res) {
+				return res;
+			}
+		});
+	}
+
+	function postOnBreakFlag(flag) {
+		return $.post({
+			url: onBreakUrl,
+			data : {
+				"onBreak": flag
+			},
+			success: function(res) {
+				return true;
+			},
+			error: function(res) {
+				return false;
+			}
+		});
+	}
+
 	return {
 		closeOrder: closeOrder,
 		generateRandomIngredientList: generateRandomIngredientList,
 		generateRandomOrder: generateRandomOrder,
 		getMissingIngredientList: getMissingIngredientList,
 		getOrders: getOrders,
+		getOnBreakFlag : getOnBreakFlag,
 		options: Options,
 		postMissingIngredients: postMissingIngredients,
 		postOrder: postOrder,
 		postRandomOrder: postRandomOrder,
-		postRandomMissingIngredients: postRandomMissingIngredients
+		postRandomMissingIngredients: postRandomMissingIngredients,
+		postOnBreakFlag: postOnBreakFlag
 	}
 })();

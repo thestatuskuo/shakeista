@@ -1,13 +1,24 @@
 $( document ).ready(function() {
 	buildInventoryList();
 	// Ignition.getOrders().then(function(data) {
-	// 	console.log(data[0]);
+	// 	console.log(data);
 	// });
 
 	$("#submitMissing").click(function() {
 		Ignition.postMissingIngredients(getMissingIngredients()).then(function(data) {
 			if (data) {
-				//show sucess message
+				//show success message
+			} else {
+				//show error message
+			}
+		});
+	});
+
+	$("#break-switch").change(function() {
+		var onBreak = $("#break-switch").is(':checked');
+		Ignition.postOnBreakFlag(onBreak).then(function(data) {
+			if (data) {
+				//show success message
 			} else {
 				//show error message
 			}
