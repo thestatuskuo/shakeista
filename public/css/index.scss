@@ -2,13 +2,13 @@
 @import 'font-awesome/css/font-awesome.min.css';
 $green: #75BD5C;
 $lightgray: #EFEFEF;
-$lightgrey: #c1c1c1;
-$green: #6cc24a;
-$darkgrey: #7e847d;
-$white: #ffffff;
+$lightgrey: #C1C1C1;
+$green: #6CC24A;
+$darkgrey: #7E847D;
+$white: #FFFFFF;
 $black: #000000;
-$gold: #febf16;
-$darkgreen: #1d7102;
+$gold: #FEBF16;
+$darkgreen: #1D7102;
 $red: #BC0505;
 
 html{
@@ -54,7 +54,7 @@ button{
   text-align: center;
 
   .logo-wrapper{
-    margin: 50px 0 60px -60px;
+    margin: 30px 0 40px -60px;
 
     .logo-image{
       display: block;
@@ -97,7 +97,7 @@ button{
 
   .shakes-wrapper{
     font-weight: bold;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     .shakes-date{
       font-size: 1.3em;
@@ -123,16 +123,16 @@ button{
 
 #orders, #inventory, #break{
   .nav.break, .nav.inventory, .nav.home, .nav.orders{
-      background: $gold;
-      border: 0;
-      border-radius: 4px;
-      text-align: center;
-      padding: 16px;
-      width: 140px;
-      color: white;
-      font-weight: 600;
-      margin-left: 15px;
-      font-size: 0.85em;
+    background: $gold;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+    padding: 16px;
+    width: 140px;
+    color: white;
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 0.85em;
   }
   .content-wrapper{
     @media only screen and (max-width: 768px){
@@ -231,6 +231,7 @@ button{
       height: 110px;
       float: left;
       margin-right: 19px;
+      background: #D6D5D5;
       &:last-of-type{
         margin-right: 0;
       }
@@ -281,53 +282,52 @@ button{
   }
 
   /* The Modal (background) */
-  .modal {
-      display: none; /* Hidden by default */
-      position: absolute; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 5%; /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 95%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  .modal{
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 95%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
 
   /* Modal Content */
-  .modal-content {
-      position: relative;
-      background-color: #fefefe;
-      margin: auto;
-      padding: 0;
-      border: 1px solid #888;
-      width: 90%;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  .modal-content{
+    position: relative;
+    background-color: #FEFEFE;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888888;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
   /* The Close Button */
-  .close {
-      color: black;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
+  .close{
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
   }
 
-  .close:hover,
-  .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
+  .close:hover, .close:focus{
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
   }
 
-  .modal-header {
-      padding: 2px 16px;
-      // background-color: #5cb85c;
-      color: white;
+  .modal-header{
+    padding: 2px 16px;
+    // background-color: #5cb85c;
+    color: white;
   }
 
-  .modal-body {
+  .modal-body{
     padding: 5px 22px 16px 16px;
     p{
       color: $green;
@@ -358,10 +358,10 @@ button{
   }
 
 
-  .modal-footer {
-      padding: 2px 16px;
-      // background-color: #5cb85c;
-      color: white;
+  .modal-footer{
+    padding: 2px 16px;
+    // background-color: #5cb85c;
+    color: white;
   }
 }
 
@@ -407,10 +407,14 @@ button{
     margin-right: 10px;
     -webkit-appearance: none;
 
+    &:hover{
+      cursor: pointer;
+    }
+
     @media only screen and (max-width: 768px){
       margin-right: 10px;
     }
-  } 
+  }
 
   .customization-panel{
     width: 49%;
@@ -431,62 +435,78 @@ button{
       float: right;
     }
   }
-
 }
 
 //SLIDER
-.switch {
+.switch{
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin-top: 20px;
 }
 
-.switch input {display:none;}
+.closed{
+  &:before{
+    content:'CLOSED';
+  }
+  &.open:before{
+    content:'OPEN';
+  }
+  display: block;
+  position: relative;
+  top: 44px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
 
-.slider {
+.switch input{
+  display: none;
+}
+
+.slider{
   position: absolute;
   cursor: pointer;
   top: 0;
-  left: 0;
+  left: -3px;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #CCCCCC;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 
-.slider:before {
+.slider:before{
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked + .slider{
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus + .slider{
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked + .slider:before{
   -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+      -ms-transform: translateX(26px);
+          transform: translateX(26px);
 }
 
 /* Rounded sliders */
-.slider.round {
+.slider.round{
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider.round:before{
   border-radius: 50%;
 }
