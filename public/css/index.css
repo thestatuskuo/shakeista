@@ -123,9 +123,15 @@ html {
 
 /*********** END HOME PAGE ************/
 /********** SHAKE ORDER PAGE **********/
+@media only screen and (max-width: 768px) {
+  #orders .content-wrapper {
+    width: 740px; } }
 #orders .logo-wrapper {
-  margin: 32px 0 30px 0;
+  margin: 25px 0 20px 0;
   position: relative; }
+  @media only screen and (max-width: 768px) {
+    #orders .logo-wrapper {
+      margin: 40px 0; } }
   #orders .logo-wrapper .logo-image {
     display: block;
     width: 175px; }
@@ -137,16 +143,16 @@ html {
     font-size: 0.4em;
     left: -4px;
     position: relative; }
-@media only screen and (max-width: 768px) {
-  #orders .content-wrapper {
-    width: 700px; } }
 #orders .order {
-  width: 49%;
+  width: 48.5%;
   border-radius: 4px;
   background-color: white;
   box-sizing: border-box;
   padding: 20px;
   position: relative; }
+  @media only screen and (max-width: 768px) {
+    #orders .order {
+      padding: 15px; } }
   #orders .order.first-order {
     float: left;
     margin: 0 15px 20px 0; }
@@ -198,10 +204,14 @@ html {
     margin-right: 19px; }
     #orders .order-queue .order:last-of-type {
       margin-right: 0; }
+    @media only screen and (max-width: 768px) {
+      #orders .order-queue .order {
+        width: 17.8%; } }
   #orders .order-queue .order-name {
-    font-size: 1.3em; }
-  #orders .order-queue .flavor {
     font-size: 1em; }
+  #orders .order-queue .flavor {
+    font-size: 0.8em;
+    margin-bottom: 0; }
   #orders .order-queue .done, #orders .order-queue .subhead, #orders .order-queue .order-instructions-box, #orders .order-queue .cancel, #orders .order-queue .base, #orders .order-queue .add-ons, #orders .order-queue .boosts {
     display: none; }
 #orders .subhead {
@@ -212,7 +222,11 @@ html {
 #orders .order-title {
   font-size: 1.2em;
   margin: 15px auto;
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 1.5; }
+  @media only screen and (max-width: 768px) {
+    #orders .order-title {
+      font-size: 1em; } }
 #orders .order-name {
   font-size: 1.7em;
   font-weight: bold;
