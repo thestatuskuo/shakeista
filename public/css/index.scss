@@ -4,34 +4,57 @@ $green: #75BD5C;
 $lightgray: #EFEFEF;
 
 html{
-	background: $lightgray;
+  background: $lightgray;
+  font-family: Arial, 'Helvetica', sans-serif;
 }
 
 .content-wrapper{
   margin: 0 auto;
   width: 960px;
-  text-align: center;
+
   @media only screen and (max-width: 768px){
     width: 768px;
   }
 }
 
+.logo-wrapper{
+  .logo-image{
+    display: block;
+  }
+
+  .logo-tag{
+    color: $green;
+    font-weight: bold;
+  }
+
+  .logo-tag-sub{
+    font-style: italic;
+    color: black;
+  }
+}
+
+/*********** HOME PAGE ************/
+
 #home{
-  font-family: Arial, 'Helvetica', sans-serif;
-  .logo{
+  display: none;
+  text-align: center;
+
+  .logo-wrapper{
     margin: 50px 0 60px -60px;
 
     .logo-image{
       display: block;
       margin: 0 auto;
     }
+
     .logo-tag{
       color: $green;
       font-size: 3.6em;
       position: relative;
       font-weight: bold;
-      left: 78px;
+      left: 95px;
     }
+
     .logo-tag-sub{
       font-style: italic;
       font-size: 0.4em;
@@ -52,9 +75,9 @@ html{
     border-radius: 5px;
 
     @media only screen and (max-width: 768px){
-	    margin: 0 25px 50px;
-	    width: 260px;
-	    height: 200px;
+      margin: 0 25px 50px;
+      width: 260px;
+      height: 200px;
     }
   }
 
@@ -64,24 +87,61 @@ html{
     color: $green;
   }
 
-  .shakes{
+  .shakes-wrapper{
     font-weight: bold;
     margin-bottom: 60px;
+
     .shakes-date{
       font-size: 1.3em;
       text-transform: uppercase;
       color: $green;
     }
+
     .shakes-served{
       font-size: 2em;
       text-transform: uppercase;
       margin: 15px auto 5px;
-      // font-style: italic;
     }
+
     .shakes-counter{
       font-size: 3em;
       font-style: italic;
       letter-spacing: 2px;
     }
   }
+}
+
+/*********** END HOME PAGE ************/
+
+/********** SHAKE ORDER PAGE **********/
+
+#orders{
+  // display: none;
+
+  .logo-wrapper{
+    margin: 50px 0 60px 0;
+
+    @media only screen and (max-width: 768px){
+      margin-left: 40px;    
+    }
+
+    .logo-image{
+      display: block;
+      width: 175px;
+    }
+    .logo-tag{
+      font-size: 1.25em;
+      position: relative;
+      left: 30px;
+    }
+    .logo-tag-sub{
+      font-size: 0.4em;
+      left: -4px;
+      position: relative;
+    }
+  }
+
+
+
+
 }
