@@ -121,10 +121,6 @@ html{
   .logo-wrapper{
     margin: 50px 0 60px 0;
 
-    @media only screen and (max-width: 768px){
-      margin-left: 40px;    
-    }
-
     .logo-image{
       display: block;
       width: 175px;
@@ -141,8 +137,14 @@ html{
     }
   }
 
+  .content-wrapper{
+      @media only screen and (max-width: 768px){
+        width: 700px;
+      }
+  }
+
   .order{
-    width: 48%;
+    width: 49%;
     border-radius: 4px;
     background-color: white;
     box-sizing: border-box;
@@ -194,6 +196,14 @@ html{
       &:last-of-type{
         margin-right: 0;
       }
+    }
+
+    .flavor{
+      font-size: 1em;
+    }
+
+    .done, .subhead, .order-instructions-box, .cancel, .base, .add-ons, .boosts{
+      display: none;
     }
   }
 

@@ -4,12 +4,16 @@ $( document ).ready(function() {
     orders.then(function(data) {
 		$.each(data, function(i, item) {
 			$( "#orders .logo-wrapper" ).after( 
-				'<div class="order"><span class="done"><i class="fa fa-check" aria-hidden="true"></i></span><p class="order-name">Sharie</p><p class="subhead">Order</p><div class="order-wrapper"><p class="order-title">Flavor: <span class="order-selection">'+data[i]['Flavors[]']+'</span></p><p class="order-title">Base: <span class="order-selection">'+data[i]['Base[]']+'</span></p><p class="order-title">Add-Ons: <span class="order-selection">'+data[i]['Add-Ins[]']+'</span></p><p class="order-title">Boosts: <span class="order-selection">'+data[i]['Boosts[]']+'</span></p></div><p class="subhead">Special Instructions</p><p class="order-instructions-box">'+data[i]['note']+'</p><button class="cancel">CANCEL ORDER</button></div>'
+				'<div class="order"><span class="done"><i class="fa fa-check" aria-hidden="true"></i></span><p class="order-name">Sharie</p><p class="subhead">Order</p><div class="order-wrapper"><p class="order-title flavor">Flavor: <span class="order-selection">'+data[i]['Flavors[]']+'</span></p><p class="order-title base">Base: <span class="order-selection base">'+data[i]['Base[]']+'</span></p><p class="order-title add-ons">Add-Ons: <span class="order-selection">'+data[i]['Add-Ins[]']+'</span></p><p class="order-title boosts">Boosts: <span class="order-selection">'+data[i]['Boosts[]']+'</span></p></div><p class="subhead">Special Instructions</p><p class="order-instructions-box">'+data[i]['note']+'</p><button class="cancel">CANCEL ORDER</button></div>'
 			);
 		});
 		$("#orders .order").first().addClass('first-order');
 		$("#orders .first-order").next('#orders .order').addClass('second-order');
 		$("#orders .order:not(.first-order,.second-order)").wrapAll("<div class='order-queue' />")
+		$("#orders .order-selection").text(function(){
+			return $(this).text().replace(",", ", "); 
+		});
+
     });
 
 	$("#submitMissing").click(function() {
