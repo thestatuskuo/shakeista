@@ -49,12 +49,20 @@ $( document ).ready(function() {
 	$('body').on('click', '.notify-user', function() {
 	    var id = $(this).data("id");
 	    console.log(id);
-	    var note = $(this).siblings('textarea').val()
+	    var note = $(this).siblings('textarea').val();
+	    if (note.length < -1 || note == ''){
+	    	alert("Please enter a reason for cancelling");
+	    	return
+	    }
 		Ignition.cancelOrder(id, note).then(function(data) {
 			//refresh list
 			buildOrders();
 		});
 	});
+
+	if ($(".switch .closed").hasClass('open')){
+		console.log('hello');
+	};
 });
 
 function buildOrders() {
