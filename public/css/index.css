@@ -92,7 +92,7 @@ button:hover {
   #home .nav {
     width: 180px;
     height: 150px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     background: white;
     margin: 0 20px 20px;
     border: 0;
@@ -325,7 +325,8 @@ button:hover {
       color: black;
       font-size: 0.85em; }
     #inventory h1 label {
-      margin-left: 5px; }
+      margin-left: 5px;
+      vertical-align: middle; }
   #inventory #submitMissing {
     background: #6cc24a;
     border: 0;
@@ -336,7 +337,12 @@ button:hover {
     color: white;
     font-weight: 600;
     font-size: 1em;
-    margin-top: 10px; }
+    margin-top: 10px;
+    float: right;
+    margin-right: 33px; }
+    @media only screen and (max-width: 768px) {
+      #inventory #submitMissing {
+        margin-right: 10px; } }
   #inventory .customization-panel {
     width: 49%;
     border-radius: 4px;

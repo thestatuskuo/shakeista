@@ -81,7 +81,7 @@ button{
   .nav{
     width: 180px;
     height: 150px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     background: white;
     margin: 0 20px 20px;
     border: 0;
@@ -390,6 +390,7 @@ button{
     }
     label{
       margin-left: 5px;
+      vertical-align: middle;
     }
   }
 
@@ -404,6 +405,12 @@ button{
     font-weight: 600;
     font-size: 1em;
     margin-top: 10px;
+    float: right;
+    margin-right: 33px;
+
+    @media only screen and (max-width: 768px){
+      margin-right: 10px;
+    }
   } 
 
   .customization-panel{
