@@ -43,9 +43,9 @@ $( document ).ready(function() {
 
 	$("#break-switch").change(function() {
 		var onBreak = $("#break-switch").is(':checked');
+		$(".switch .closed").toggleClass('open');
 		Ignition.postOnBreakFlag(onBreak).then(function(data) {
 			if (data) {
-				//show success message
 			} else {
 				//show error message
 			}

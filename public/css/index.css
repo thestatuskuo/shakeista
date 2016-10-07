@@ -60,7 +60,7 @@ html {
 .logo-wrapper .logo-image {
   display: block; }
 .logo-wrapper .logo-tag {
-  color: #6cc24a;
+  color: #6CC24A;
   font-weight: bold; }
 .logo-wrapper .logo-tag-sub {
   font-style: italic;
@@ -73,12 +73,12 @@ button:hover {
 #home {
   text-align: center; }
   #home .logo-wrapper {
-    margin: 50px 0 60px -60px; }
+    margin: 30px 0 40px -60px; }
     #home .logo-wrapper .logo-image {
       display: block;
       margin: 0 auto; }
     #home .logo-wrapper .logo-tag {
-      color: #6cc24a;
+      color: #6CC24A;
       font-size: 3.6em;
       position: relative;
       font-weight: bold;
@@ -101,14 +101,14 @@ button:hover {
   #home .fa {
     font-size: 2em;
     margin-bottom: 15px;
-    color: #6cc24a; }
+    color: #6CC24A; }
   #home .shakes-wrapper {
     font-weight: bold;
-    margin-bottom: 60px; }
+    margin-bottom: 40px; }
     #home .shakes-wrapper .shakes-date {
       font-size: 1.3em;
       text-transform: uppercase;
-      color: #6cc24a; }
+      color: #6CC24A; }
     #home .shakes-wrapper .shakes-served {
       font-size: 2em;
       text-transform: uppercase;
@@ -120,7 +120,7 @@ button:hover {
 
 /*********** END HOME PAGE ************/
 #orders .nav.break, #orders .nav.inventory, #orders .nav.home, #orders .nav.orders, #inventory .nav.break, #inventory .nav.inventory, #inventory .nav.home, #inventory .nav.orders, #break .nav.break, #break .nav.inventory, #break .nav.home, #break .nav.orders {
-  background: #febf16;
+  background: #FEBF16;
   border: 0;
   border-radius: 4px;
   text-align: center;
@@ -204,7 +204,8 @@ button:hover {
       width: 18.4%;
       height: 110px;
       float: left;
-      margin-right: 19px; }
+      margin-right: 19px;
+      background: #D6D5D5; }
       #orders .order-queue .order:last-of-type {
         margin-right: 0; }
       @media only screen and (max-width: 768px) {
@@ -233,7 +234,7 @@ button:hover {
   #orders .order-name {
     font-size: 1.7em;
     font-weight: bold;
-    color: #6cc24a; }
+    color: #6CC24A; }
   #orders .order-selection {
     font-weight: normal; }
   #orders .modal {
@@ -259,10 +260,10 @@ button:hover {
     /* Black w/ opacity */ }
   #orders .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: #FEFEFE;
     margin: auto;
     padding: 0;
-    border: 1px solid #888;
+    border: 1px solid #888888;
     width: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   #orders .close {
@@ -270,9 +271,8 @@ button:hover {
     float: right;
     font-size: 28px;
     font-weight: bold; }
-  #orders .close:hover,
-  #orders .close:focus {
-    color: #000;
+  #orders .close:hover, #orders .close:focus {
+    color: #000000;
     text-decoration: none;
     cursor: pointer; }
   #orders .modal-header {
@@ -281,7 +281,7 @@ button:hover {
   #orders .modal-body {
     padding: 5px 22px 16px 16px; }
     #orders .modal-body p {
-      color: #6cc24a;
+      color: #6CC24A;
       font-weight: bold;
       font-size: 1.5em;
       margin-bottom: 10px; }
@@ -293,7 +293,7 @@ button:hover {
       font-family: Arial, 'Helvetica', Sans-serif;
       padding: 5px; }
     #orders .modal-body .notify-user {
-      background: #6cc24a;
+      background: #6CC24A;
       border: 0;
       border-radius: 4px;
       text-align: center;
@@ -316,7 +316,7 @@ button:hover {
     width: 960px;
     margin: 0 auto; }
   #inventory h1 {
-    color: #6cc24a;
+    color: #6CC24A;
     font-weight: bold;
     font-size: 1.3em; }
     #inventory h1 li {
@@ -326,7 +326,7 @@ button:hover {
     #inventory h1 label {
       margin-left: 5px; }
   #inventory input#submitMissing {
-    background: #6cc24a;
+    background: #6CC24A;
     border: 0;
     border-radius: 4px;
     text-align: center;
@@ -339,6 +339,8 @@ button:hover {
     float: right;
     margin-right: 10px;
     -webkit-appearance: none; }
+    #inventory input#submitMissing:hover {
+      cursor: pointer; }
     @media only screen and (max-width: 768px) {
       #inventory input#submitMissing {
         margin-right: 10px; } }
@@ -361,7 +363,19 @@ button:hover {
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 34px; }
+  height: 34px;
+  margin-top: 20px; }
+
+.closed {
+  display: block;
+  position: relative;
+  top: 44px;
+  font-size: 1.1em;
+  font-weight: bold; }
+  .closed:before {
+    content: 'CLOSED'; }
+  .closed.open:before {
+    content: 'OPEN'; }
 
 .switch input {
   display: none; }
@@ -370,23 +384,23 @@ button:hover {
   position: absolute;
   cursor: pointer;
   top: 0;
-  left: 0;
+  left: -3px;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s; }
+  background-color: #CCCCCC;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s; }
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
 
 input:checked + .slider {
   background-color: #2196F3; }
