@@ -49,20 +49,20 @@ var Ignition = (function() {
 	}
 
  	function getOrders() {
-		$.get({
+		return $.get({
 			url: orderUrl,
 			success: function(res) {
-				console.log(res);
+				return res;
 			}
 		});
 	}
 
 	function postOrder(order) {
-		$.post({
+		return $.post({
 			url: orderUrl,
 			data : order,
 			success: function(res) {
-				console.log(res);
+				return res;
 			}
 		});
 	}
@@ -95,27 +95,26 @@ var Ignition = (function() {
 
 
  	function getMissingIngredientList() {
-		$.get({
+		return $.get({
 			url: ingredientsUrl,
 			success: function(res) {
-				console.log(res);
+				return res;
 			}
 		});
 	}
 
 	function postMissingIngredients(ingredientList) {
-		$.post({
+		return $.post({
 			url: ingredientsUrl,
 			data : ingredientList,
 			success: function(res) {
-				console.log(res);
+				return res;
 			}
 		});
 	}
 
 	function postRandomMissingIngredients() {
 		var list = generateRandomIngredientList();
-		console.log(list)
 		postMissingIngredients(list);
 	}
 
@@ -125,6 +124,7 @@ var Ignition = (function() {
 		generateRandomOrder: generateRandomOrder,
 		getMissingIngredientList: getMissingIngredientList,
 		getOrders: getOrders,
+		options: Options,
 		postMissingIngredients: postMissingIngredients,
 		postOrder: postOrder,
 		postRandomOrder: postRandomOrder,
