@@ -122,18 +122,17 @@ button{
 /*********** END HOME PAGE ************/
 
 #orders, #inventory, #break{
-  .nav.break, .nav.inventory, .nav.home{
+  .nav.break, .nav.inventory, .nav.home, .nav.orders{
       background: $gold;
       border: 0;
       border-radius: 4px;
       text-align: center;
       padding: 16px;
-      width: 100px;
+      width: 140px;
       color: white;
-      font-size: 20px;
       font-weight: 600;
       margin-left: 15px;
-      font-size: 1em;
+      font-size: 0.85em;
   }
   .content-wrapper{
     @media only screen and (max-width: 768px){
@@ -215,7 +214,7 @@ button{
       font-size: 20px;
       font-weight: 600;
       display: block;
-      margin: 40px auto 10px;
+      margin: 20px auto 10px;
     }
     .order-instructions-box{
       min-height: 15px;
@@ -229,7 +228,7 @@ button{
 
     .order{
       width: 18.4%;
-      height: 130px;
+      height: 110px;
       float: left;
       margin-right: 19px;
       &:last-of-type{
@@ -256,7 +255,7 @@ button{
 
   .subhead{
     font-size: 1.3em;
-    margin: 20px auto;
+    margin: 10px auto;
     font-weight: bold;
     text-decoration: underline;
   }
@@ -265,7 +264,7 @@ button{
     font-size: 1.2em;
     margin: 15px auto;
     font-weight: bold;
-    line-height: 1.5;
+    line-height: 1.3;
     @media only screen and (max-width: 768px){
       font-size: 1em;
     }
@@ -290,7 +289,7 @@ button{
       left: 0;
       top: 0;
       width: 100%; /* Full width */
-      height: 100%; /* Full height */
+      height: 95%; /* Full height */
       overflow: auto; /* Enable scroll if needed */
       background-color: rgb(0,0,0); /* Fallback color */
       background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -390,11 +389,10 @@ button{
     }
     label{
       margin-left: 5px;
-      vertical-align: middle;
     }
   }
 
-  #submitMissing{
+  input#submitMissing{
     background: $green;
     border: 0;
     border-radius: 4px;
@@ -406,7 +404,8 @@ button{
     font-size: 1em;
     margin-top: 10px;
     float: right;
-    margin-right: 33px;
+    margin-right: 10px;
+    -webkit-appearance: none;
 
     @media only screen and (max-width: 768px){
       margin-right: 10px;
@@ -421,7 +420,7 @@ button{
     padding: 20px;
     position: relative;
     margin-bottom: 15px;
-    min-height: 260px;
+    min-height: 230px;
     line-height: 1.3;
 
     &:nth-of-type(odd){
