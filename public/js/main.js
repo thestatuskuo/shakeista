@@ -26,9 +26,19 @@ $( document ).ready(function() {
 		});
 	});
 
+	function openClosed(){
+		if ($(".switch .closed").hasClass('open')){
+			$('#home').addClass('open');
+		}
+		else{
+			$('#home').removeClass('open');
+		}
+	};
+
 	$("#break-switch").change(function() {
 		var onBreak = $("#break-switch").is(':checked');
 		$(".switch .closed").toggleClass('open');
+		openClosed();
 		Ignition.postOnBreakFlag(onBreak).then(function(data) {
 			if (data) {
 			} else {
@@ -49,7 +59,11 @@ $( document ).ready(function() {
 	$('body').on('click', '.notify-user', function() {
 	    var id = $(this).data("id");
 	    console.log(id);
-	    var note = $(this).siblings('textarea').val()
+	    var note = $(this).siblings('textarea').val();
+	    if (note.length < -1 || note == ''){
+	    	alert("Please enter a reason for cancelling");
+	    	return
+	    }
 		Ignition.cancelOrder(id, note).then(function(data) {
 			//refresh list
 			buildOrders();

@@ -78,6 +78,12 @@ button{
     }
   }
 
+  &:not(.open) {
+    .nav{
+      pointer-events: none;
+    }
+  }
+
   .nav{
     width: 180px;
     height: 150px;
