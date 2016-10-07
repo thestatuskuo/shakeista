@@ -1,3 +1,4 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
+    var orders = Ignition.getOrders();
+    console.log(orders);
 });
