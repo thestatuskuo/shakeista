@@ -66,16 +66,22 @@ function buildOrders() {
     	ordersCache = data;
     	var html = "";
 		$.each(data, function(i, item) {
+			var flavors = data[i]['Flavors[]'] ? data[i]['Flavors[]'] : "";
+			var base = data[i]['Base[]'] ? data[i]['Base[]'] : "";
+			var addIns = data[i]['Add-Ins[]'] ? data[i]['Add-Ins[]'] : "";
+			var boosts = data[i]['Boosts[]'] ? data[i]['Boosts[]'] : "";
+
+
 			html += '<div class="order"><span class="done" data-id="' + data[i]._id + '""><i class="fa fa-check" aria-hidden="true"></i></span>' + 
-				'<p class="order-name">Sharie</p><p class="subhead">Order</p><div class="order-wrapper">' + 
+				'<p class="order-name">' + data[i].name + '</p><p class="subhead">Order</p><div class="order-wrapper">' + 
 				'<p class="order-title flavor">Flavor: <span class="order-selection">' +
-				data[i]['Flavors[]']+'</span></p><p class="order-title base">Base: <span class="order-selection base">' +
-				data[i]['Base[]']+'</span></p><p class="order-title add-ons">Add-Ons: <span class="order-selection">' +
-				data[i]['Add-Ins[]']+'</span></p><p class="order-title boosts">Boosts: <span class="order-selection">'+
-				data[i]['Boosts[]']+'</span></p></div><p class="subhead">Special Instructions</p><p class="order-instructions-box">'+
+				flavors +'</span></p><p class="order-title base">Base: <span class="order-selection base">' +
+				base +'</span></p><p class="order-title add-ons">Add-Ons: <span class="order-selection">' +
+				addIns +'</span></p><p class="order-title boosts">Boosts: <span class="order-selection">'+
+				boosts+'</span></p></div><p class="subhead">Special Instructions</p><p class="order-instructions-box">'+
 				data[i]['note']+'</p><button class="cancel">CANCEL ORDER</button><div id="cancel-modal" class="modal">' + 
 				'<div class="modal-content"><div class="modal-header"><span class="close">×</span></div><div class="modal-body">' + 
-				'<p>Sharie</p><textarea placeholder="Why your order cant be placed"></textarea><button class="notify-user" data-id="' + data[i]._id + '">Notify User</button>' + 
+				'<p>' + data[i].name + '</p><textarea placeholder="Why your order cant be placed"></textarea><button class="notify-user" data-id="' + data[i]._id + '">Notify User</button>' + 
 				'</div></div></div></div>';
 		});
 		
